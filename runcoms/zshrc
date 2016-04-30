@@ -10,4 +10,18 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+# Docker config
+export DOCKER_HOST=tcp://192.168.99.100:2376
+export DOCKER_MACHINE_NAME=default
+export DOCKER_TLS_VERIFY=1
+export DOCKER_CERT_PATH=~/.docker/machine/machines/default
+
+# Docker alias
+alias php='docker run -ti -v $(pwd):/app --rm finizens/php:7.0.4-cli'
+alias composer='docker run -v $(pwd):/app --rm --name composer finizens/php:7.0.4-composer'
+alias c=c
+
+function c()
+{
+	ssh -i ~/.remote.pem ec2-user@$*
+}
