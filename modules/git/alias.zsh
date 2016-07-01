@@ -130,6 +130,7 @@ alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gri='git rebase --interactive'
 alias grs='git rebase --skip'
+alias grb='git rebase master'
 
 # Remote (R)
 alias gR='git remote'
@@ -179,3 +180,4 @@ alias gwc='git clean -n'
 alias gwC='git clean -f'
 alias gwx='git rm -r'
 alias gwX='git rm -rf'
+alias grh='git reset --hard origin/"$(git-branch-current 2> /dev/null)"'

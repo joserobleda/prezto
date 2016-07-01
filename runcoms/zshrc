@@ -17,8 +17,8 @@ export DOCKER_TLS_VERIFY=1
 export DOCKER_CERT_PATH=~/.docker/machine/machines/default
 
 # Docker alias
-alias php='docker run -ti -v $(pwd):/app --rm finizens/php:7.0.4-cli'
-alias composer='docker run -v $(pwd):/app --rm --name composer finizens/php:7.0.4-composer'
+alias php='docker run -ti -v $(pwd):/app --rm finizens/php:7.0.8-cli'
+alias composer='docker run -v $(pwd):/app --rm --name composer finizens/php:7.0.8-composer'
 alias c=c
 
 function c()
